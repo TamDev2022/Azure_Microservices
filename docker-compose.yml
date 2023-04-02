@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  webmvc.identity:
+    image: ${DOCKER_REGISTRY-}identitymvc
+    build:
+      context: .
+      dockerfile: src/Services/Identity/WebMVC.Identity/Dockerfile
+
+  webapi.catalog:
+    image: ${DOCKER_REGISTRY-}catalogapi
+    build:
+      context: .
+      dockerfile: src/Services/Catalog/WebApi.Catalog/Dockerfile
+
